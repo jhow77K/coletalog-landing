@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColetaLog | Organize seu Ponto de Coleta</title>
+    <style>
+        :root {
+            --primary: #0056b3;
+            --secondary: #ffdb15; /* Amarelo remetendo a logística/atenção */
+            --dark: #333;
+            --light: #f4f7f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+
+        header { background: #fff; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        
+        .logo { font-weight: bold; font-size: 1.5rem; color: var(--primary); }
+
+        .hero { padding: 80px 5%; text-align: center; background: linear-gradient(135deg, var(--primary) 0%, #003d7a 100%); color: white; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
+
+        .btn { background: var(--secondary); color: #000; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: 0.3s; display: inline-block; border: none; cursor: pointer; }
+        .btn:hover { transform: scale(1.05); filter: brightness(1.1); }
+
+        .features { padding: 60px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .feature-card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
+        .feature-card h3 { color: var(--primary); margin-bottom: 15px; }
+
+        .cta-section { padding: 60px 5%; text-align: center; background: #fff; }
+
+        footer { padding: 20px; text-align: center; font-size: 0.9rem; color: #777; border-top: 1px solid #ddd; }
+
+        @media (max-width: 768px) { .hero h1 { font-size: 1.8rem; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">ColetaLog</div>
+    </header>
+
+    <section class="hero">
+        <h1>Transforme o caos do seu Ponto de Coleta em produtividade.</h1>
+        <p>A ferramenta definitiva para organizar pacotes do Mercado Livre e agilizar o atendimento aos seus clientes.</p>
+        <a href="#contato" class="btn">Garantir Acesso Antecipado</a>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>📦 Registro Ágil</h3>
+            <p>Dê entrada em pacotes rapidamente com nossa interface otimizada para balcão.</p>
+        </div>
+        <div class="feature-card">
+            <h3>🔍 Busca Inteligente</h3>
+            <p>Encontre a encomenda do cliente em segundos, sem precisar revirar pilhas.</p>
+        </div>
+        <div class="feature-card">
+            <h3>📊 Controle Total</h3>
+            <p>Saiba exatamente quantos pacotes entraram e saíram no seu dia a dia.</p>
+        </div>
+    </section>
+
+    <section class="cta-section" id="contato">
+        <h2>Pronto para profissionalizar sua operação?</h2>
+        <p style="margin-bottom: 25px;">Estamos em fase final de testes. Deixe seu e-mail para ser avisado do lançamento.</p>
+        
+        <form id="waitlistForm">
+            <input type="email" placeholder="Seu melhor e-mail" required style="padding: 12px; width: 280px; border: 1px solid #ccc; border-radius: 5px; margin-bottom: 10px;">
+            <button type="submit" class="btn">Entrar na Lista</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2026 ColetaLog - Todos os direitos reservados.
+    </footer>
+
+    <script>
+        document.getElementById('waitlistForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Excelente! Em breve entraremos em contato com novidades sobre o ColetaLog.');
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
